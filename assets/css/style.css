@@ -1,0 +1,302 @@
+
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #4A8399;
+    --secondary-color: #375666;
+    --tertiary-color: #FFFAF0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;;
+    line-height: 1.5;
+    background: var(--tertiary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 35px 70px;
+    align-items: flex-end;
+}
+
+
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li a {
+    padding: 5px;
+    color: var(--primary-color);
+    border-bottom: var(--primary-color) solid 2px;
+    margin: 20px;
+}
+
+header nav ul li a:hover  {
+    border-bottom : none;
+    color: #fff;
+    background-color:rgba(0,36,82,255);
+}
+
+#my-name{
+    background-color:rgba(0,36,82,255);
+    margin-left: -70px;
+    
+
+}
+
+ h1 a{
+    color: #fff;
+}
+
+
+
+/*..........main Content..............*/
+
+section{
+    padding: 35px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hero {
+    background: url(../images/wall.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.hero img {
+    width: 150px;
+}
+
+.site-background {
+    width: 100%;
+    text-align: right;
+}
+
+.hero h2 {
+    color: var(--tertiary-color);  
+}
+
+
+.title {
+    flex: 1 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.title h2 {
+    font-size: xx-large;
+    color: var(--secondary-color);
+    border-right: var(--secondary-color) solid 3px;
+    padding: 0 15px;
+    text-align: right;
+}
+
+.content{
+    flex: 2 70%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    margin-left: 2%
+}
+
+.about-myself p {
+    margin-bottom: 15px;
+}
+
+/* Work */
+.my-works .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 50px;
+    grid-gap: 20px;
+}
+
+.my-works .content a {
+    display: flex;
+    grid-column: span 2;
+    grid-row: span 2;
+    border: var(--primary-color) solid 3px;
+    background-size: cover;
+    position: relative;
+    align-items: flex-end;
+}
+
+.my-works .content a:first-child {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 4;
+}
+
+.my-works .content a::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.my-works a:hover::after {
+    opacity: 0;
+}
+
+a.project1 {
+    background-image: url(../images/project-one.png);
+}
+
+a.Day-Scheduler {
+    background-image: url(../images/Scheduler.png);
+}
+
+a.javaScript-Quiz {
+    background-image: url(../images/javaScript-Quiz.png);
+}
+
+a.Password-Generator{
+    background-image: url(../images/password-generator.png);
+}
+
+a.Weather-Dashboard {
+    background-image: url(../images/weather.png);
+}
+
+
+
+.work-topic {
+    background: var(--primary-color);
+    padding: 4px 12px;
+    z-index: 1;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.work-topic h3, .work-topic p {
+    color: var(--tertiary-color);
+}
+
+.work-topic h3 {
+    font-size: 11pt;
+}
+
+.work-topic p {
+    font-size: 9pt;
+}
+
+/* Footer/Contact Me */
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact ul li a {
+    padding: 0 5px;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) solid 4px;
+    margin: 0 20px;
+}
+.contact ul li a:hover  {
+    border-bottom : none;
+    color: #000;
+}
+
+/*** MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER ***/
+/* this will be applied on any screen smaller than 980px */
+@media screen and (max-width: 980px) {
+    header {
+        padding: 20px;
+    }
+
+    header nav ul {
+        margin: 20px 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/*** MEDIA QUERY FOR TABLETS AND SMALLER ***/
+/* this will be applied on any screen between 768px and 575px */
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .title {
+        flex: 1 100%;
+        justify-content: center;
+    }
+
+    .title h2 {
+        border-bottom: var(--secondary-color) solid 3px;
+        border-right: none;
+        margin-bottom: 15px;
+    }
+}
+
+/*** MEDIA QUERY FOR MOBILE PHONES AND SMALLER ***/
+/* this will be applied on any screen smaller than 575px */
+@media screen and (max-width: 575px) {
+    header h1{
+        font-size: 1rem;
+    }
+
+    header nav ul li a {
+        margin: 10px;
+    }
+
+    .work .content {
+        grid-template-columns: 1fr 1fr;
+        grid-gap : 5px 0;
+    }
+
+    .work .content a {
+        grid-column: 1 / span 2;
+    }
+
+    .work-topic h3 {
+        font-size: 9pt;
+    }
+    
+    .work-topic p {
+        font-size: 7pt;
+    }
+
+    .contact ul li a {
+        margin: 0 10px;
+    }
+}
