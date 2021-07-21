@@ -1,13 +1,12 @@
 # Portfolio
 
 ### Description:
-```sh
 It is an simple portofolio application. It provides details about personnel information.  This app will run in the browser and feature dynamically with updated [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), and [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-```
+
 ## Feature:
-```sh
+
  For the conveninet, and best visual experinece, it has made simple, responsive, and colorful with appropriate css style 
- ```
+ 
 
 
 ## Screenshot:
